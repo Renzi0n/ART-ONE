@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "8.16"
+
+before_deploy:
+  - npm run build
+  - echo -e "node_modules\npackage-lock.json" > .gitignore
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: cbb3e564129bd89ce1e5575a1a8d38f7fd6ceeb6
+  keep-history: true
+  on:
+    branch: master
+    node: "8.16"

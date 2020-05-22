@@ -1,0 +1,64 @@
+.sale-slider {
+  padding-top: 39px;
+  padding-bottom: 39px;
+}
+
+.sale-slider__title {
+  background: url("../img/ribbon.svg") no-repeat;
+  background-position: center;
+  min-height: 30px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sale-slider__control .control__btn {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .sale-slider {
+    width: 48.2%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .sale-slider {
+    width: auto;
+    position: relative;
+  }
+
+  .sale-slider__title {
+    background-size: 100%;
+    width: 514px;
+    min-height: 60px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  .sale-slider__wrapper {
+    width: 713px;
+  }
+
+  .sale-slider__control {
+    position: absolute;
+    left: calc(50% - 40.5px);
+  }
+
+  .sale-slider__control .control__btn {
+    display: block;
+    bottom: 280px;
+  }
+
+  .sale-slider__control .control__btn--left {
+    left: -300px;
+  }
+
+  .sale-slider__control .control__btn--right {
+    right: -300px;
+    transform: rotate(181deg);
+  }
+}

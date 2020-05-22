@@ -1,0 +1,21 @@
+@mixin subTitle {
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+@mixin title {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    font-size: 36px;
+    line-height: 47px;
+  }
+}
