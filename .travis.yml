@@ -10,7 +10,7 @@ before_deploy:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: cbb3e564129bd89ce1e5575a1a8d38f7fd6ceeb6
+  github-token: 4a2208e59709b8608cdbd41755199c42b218d5e2
   keep-history: true
   on:
     branch: master
