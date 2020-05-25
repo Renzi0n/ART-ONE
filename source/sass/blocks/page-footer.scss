@@ -93,8 +93,8 @@
   .page-footer {
     display: flex;
     justify-content: space-between;
-    padding-left: 11%;
-    padding-right: 11%;
+    padding-left: 7.6%;
+    padding-right: 7.6%;
   }
 
   .page-footer__list {
@@ -113,7 +113,7 @@
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    padding-left: 12.5%;
-    padding-right: 12.5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }

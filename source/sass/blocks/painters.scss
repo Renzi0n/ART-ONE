@@ -44,6 +44,7 @@
     background-color: $color-bg-secondary;
     position: absolute;
     left: -5%;
+    bottom: -2px;
     transform: scale(0);
     transition: $animation-primary;
   }

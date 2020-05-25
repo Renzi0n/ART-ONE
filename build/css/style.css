@@ -168,8 +168,8 @@ img {
 
 @media (min-width: 660px) {
   .page-header {
-    padding-left: 11%;
-    padding-right: 11%; }
+    padding-left: 7.6%;
+    padding-right: 7.6%; }
   .page-header__list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -240,8 +240,8 @@ img {
     height: fit-content;
     background-color: white;
     margin-top: 0;
-    padding-left: 12.5%;
-    padding-right: 12.5%; }
+    padding-left: 5%;
+    padding-right: 5%; }
   .page-header__list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -396,7 +396,8 @@ img {
 @media (min-width: 1200px) {
   .sale-slider {
     width: auto;
-    position: relative; }
+    position: relative;
+    margin-left: auto; }
   .sale-slider__title {
     background-size: 100%;
     width: 514px;
@@ -410,7 +411,7 @@ img {
     left: calc(50% - 40.5px); }
   .sale-slider__control .control__btn {
     display: block;
-    bottom: 380px; }
+    bottom: 440px; }
   .sale-slider__control .control__btn--left {
     left: -300px; }
   .sale-slider__control .control__btn--right {
@@ -475,7 +476,7 @@ img {
   background-color: transparent;
   border: none;
   position: absolute;
-  padding: 12px 5px 28px;
+  padding: 14px 5px 28px;
   cursor: pointer; }
   .control__btn::before {
     content: "";
@@ -671,6 +672,7 @@ img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  min-height: 13px;
   background-color: transparent;
   font-size: 10px;
   line-height: 13px;
@@ -876,8 +878,8 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-left: 11%;
-    padding-right: 11%; }
+    padding-left: 7.6%;
+    padding-right: 7.6%; }
   .page-footer__list {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -894,8 +896,8 @@ img {
 
 @media (min-width: 1200px) {
   .page-footer {
-    padding-left: 12.5%;
-    padding-right: 12.5%; } }
+    padding-left: 5%;
+    padding-right: 5%; } }
 
 .painters__header {
   background-color: #f3f3f3;
@@ -951,6 +953,7 @@ img {
     background-color: #e34f0f;
     position: absolute;
     left: -5%;
+    bottom: -2px;
     -webkit-transform: scale(0);
             transform: scale(0);
     -webkit-transition: all 0.2s ease-out;
