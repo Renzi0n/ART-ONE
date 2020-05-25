@@ -27,6 +27,12 @@
   background-color: rgba(196, 196, 196, 1);
   border-radius: 12px;
   cursor: pointer;
+  transition: $animation-primary;
+}
+
+.control__radio + label:hover::before {
+  width: 16px;
+  height: 16px;
 }
 
 .control__radio:checked + label::before {
@@ -42,6 +48,7 @@
   border: none;
   position: absolute;
   padding: 12px 5px 28px;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -61,6 +68,22 @@
     background-color: rgba(178, 178, 178, 1);
     border-radius: 2px;
     transform: rotate(45deg) translate(5.5px, 5px);
+    transition: $animation-primary;
+  }
+
+  &:hover::before {
+    transform: rotate(-45deg) scale(1.1);
+    box-shadow: $shadow-primary;
+  }
+
+  &:hover::after {
+    transform: rotate(45deg) translate(11px, 11.5px) scale(1.1);
+    box-shadow: $shadow-primary;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.5;
   }
 }
 

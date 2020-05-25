@@ -1,0 +1,24 @@
+.button-primary {
+  display: block;
+  width: 174px;
+  background-color: transparent;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 7px 39px;
+  border: 0.8px solid #646464;
+  border-radius: 16px;
+  color: rgba(0, 0, 0, 1);
+  transition: $animation-primary;
+
+  &:hover {
+    color: $color-font-secondary;
+    box-shadow: $shadow-primary;
+  }
+
+  &:active {
+    opacity: 0.5;
+    box-shadow: inset $shadow-primary;
+  }
+}

@@ -58,15 +58,10 @@
   text-transform: uppercase;
   font-size: 14px;
   padding-bottom: 43px;
-  text-shadow: $shadow-primary;
   line-height: 18px;
 }
 
-.page-header__list-item--active a,
-.page-header__list-item a:active,
-.page-header__list-item a:hover {
-  display: block;
-  color: $color-font-secondary;
+.page-header__list-item a {
   position: relative;
 
   &::after {
@@ -77,6 +72,21 @@
     background-color: $color-bg-secondary;
     position: absolute;
     bottom: -6px;
+    transform: scale(0);
+    transition: $animation-primary;
+  }
+}
+
+.page-header__list-item--active a,
+.page-header__list-item a:active,
+.page-header__list-item a:hover {
+  display: block;
+  color: $color-font-secondary;
+  text-shadow: $shadow-primary;
+  transition: $animation-primary;
+
+  &::after {
+    transform: scale(1);
   }
 }
 
@@ -90,7 +100,7 @@
 
 .page-header__list-item--icons a:active::after,
 .page-header__list-item--icons a:hover::after {
-  display: none;
+  transform: scale(0);
 }
 
 .page-header__icon-phone {
