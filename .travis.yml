@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "stable"
+notifications:
+  email: false
+
+cache:
+  directories:
+  - node_modules
+
+script:
+  npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github-token: 0e9347fbe4afe1739628242548df7e9f14e99d15
+  local_dir: build
+  on:
+    branch: master
