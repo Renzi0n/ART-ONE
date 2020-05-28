@@ -15,6 +15,7 @@ var concat = require('gulp-concat');
 var jsmin = require('gulp-jsmin');
 var server = require("browser-sync").create();
 var webp = require('gulp-webp');
+var ghPages = require('gulp-gh-pages');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -112,6 +113,11 @@ gulp.task("server", function () {
   gulp.watch("source/*.html",  gulp.series("htmlminify"));
   gulp.watch("source/img/*.{jpg,png,svg,webp}",  gulp.series("copy-image"));
   gulp.watch("source/js/*.js",  gulp.series("js"));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('build/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task("build", gulp.series("clean", "copy", "css", "htmlminify", "js"));

@@ -11,6 +11,7 @@
     "gulp": "4.0.x",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-jsmin": "^0.1.5",
