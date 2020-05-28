@@ -1,0 +1,116 @@
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__btn {
+  display: block;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  border: 2px solid rgba(100, 100, 100, 1);
+  margin-left: 20px;
+  margin-right: auto;
+  transition: $animation-primary;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: rgba(100, 100, 100, 1);
+    border-radius: 2px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: calc(50% - 6px);
+    bottom: 14.5px;
+    transition: $animation-primary;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: rgba(100, 100, 100, 1);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: calc(50% - 6px);
+    bottom: 8px;
+    transition: $animation-primary;
+  }
+
+  &:hover {
+    border: 2px solid rgba(0, 0, 0, 1);
+  }
+
+  &:hover::after,
+  &:hover::before {
+    background-color: rgba(0, 0, 0, 1);
+  }
+}
+
+.pagination__btn--prev {
+  margin-left: auto;
+  margin-right: 20px;
+
+  &::before {
+    transform: rotate(-45deg);
+    left: calc(50% - 6px);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+    left: calc(50% - 6px);
+  }
+}
+
+.pagination__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.pagination__item {
+  margin-right: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 120%;
+    height: 1px;
+    background-color: $color-bg-secondary;
+    position: absolute;
+    left: -10%;
+    bottom: -2px;
+    transform: scale(0);
+    transition: $animation-primary;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.pagination__item--active,
+.pagination__item:hover {
+  color: $color-font-secondary;
+
+  &::after {
+    transform: scale(1);
+  }
+}
+
+.pagination__item--inactive {
+  pointer-events: none;
+}

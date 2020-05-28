@@ -13,15 +13,17 @@
 
     <header class="page-header">
 
-      <a href="main.html" class="page-header__logo">
-        <span class="page-header__logo-mobile">Art-one</span>
+      <a href="main.html" class="page-header__logo" title="Открыть главную страницу">
+        <span class="page-header__logo-mobile" aria-label="Логотип art-one">Art-one</span>
         <img class="page-header__logo-desktop" src="img/logo-desktop.svg" alt="Логотип art-one" width="275" height="237">
       </a>
-      <button class="page-header__toggle" title="Открыть меню" type="button">
+      <button class="page-header__toggle" type="button">
         <svg class="page-header__toggle-open" width="37" height="22">
+          <title>Открыть меню</title>
           <use xlink:href="img/sprite.svg#menuOpen"></use>
         </svg>
         <svg class="page-header__toggle-close" width="25" height="25">
+          <title>Закрыть меню</title>
           <use xlink:href="img/sprite.svg#menuClose"></use>
         </svg>
       </button>
@@ -43,13 +45,13 @@
             <a href="info.html">Информация</a>
           </li>
           <li class="page-header__list-item page-header__list-item--icons">
-            <a href="tel:+89999991044" class="page-header__icon">
-              <svg class="page-header__icon-phone" width="25" height="25">
+            <a href="tel:+89999991044" class="page-header__icon" title="Позвонить нам">
+              <svg class="page-header__icon-phone" width="25" height="25" aria-label="Иконка телефона">
                 <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
             </a>
-            <a href="#" class="page-header__icon">
-              <svg href="mailto:example@mail.ru" class="page-header__icon-message" width="25" height="21">
+            <a href="mailto:example@mail.ru" class="page-header__icon" title="Написать нам на почту">
+              <svg class="page-header__icon-message" width="25" height="21" aria-label="Иконка письма">
                 <use xlink:href="img/sprite.svg#message"></use>
               </svg>
             </a>
@@ -68,7 +70,7 @@
         <div class="catalog__filters">
 
           <h3 class="catalog__filters-title">
-            <button class="catalog__filters-btn">
+            <button class="catalog__filters-btn" aria-label="Открыть или закрыть меню с фильтрами">
               Фильтры:
             </button>
           </h3>
@@ -237,24 +239,26 @@
 
         <div class="pagination">
 
-          <a href="#" class="pagination__btn pagination__btn--prev"></a>
+          <h3 class="visually-hidden">Навигация по страницам</h3>
+
+          <a href="#" class="pagination__btn pagination__btn--prev" title="Открыть предыдущую страницу"></a>
 
           <ul class="pagination__list">
             <li class="pagination__item pagination__item--active">
-              <a href="#" class="pagination__item-btn">1</a>
+              <a href="#" class="pagination__item-btn" title="Открыть страницу">1</a>
             </li>
             <li class="pagination__item">
-              <a href="#" class="pagination__item-btn">2</a>
+              <a href="#" class="pagination__item-btn" title="Открыть страницу">2</a>
             </li>
-            <li class="pagination__item">
+            <li class="pagination__item pagination__item--inactive">
               <a href="#" class="pagination__item-btn">...</a>
             </li>
             <li class="pagination__item">
-              <a href="#" class="pagination__item-btn">5</a>
+              <a href="#" class="pagination__item-btn" title="Открыть страницу">5</a>
             </li>
           </ul>
 
-          <a href="#" class="pagination__btn pagination__btn--next"></a>
+          <a href="#" class="pagination__btn pagination__btn--next" title="Открыть следующую страницу"></a>
 
         </div>
 
@@ -267,10 +271,10 @@
       <div class="page-footer__contacts">
         <p class="page-footer__contacts-title">Контакты</p>
         <span class="page-footer__contacts-item">
-          <a class="page-footer__tel" href="tel:+89999991044">8 (999) 999 - 10 - 44</a>
+          <a class="page-footer__tel" href="tel:+89999991044" title="Позвонить нам">8 (999) 999 - 10 - 44</a>
         </span>
         <span class="page-footer__contacts-item">
-          <a class="page-footer__mail" href="mailto:example@mail.ru">example@mail.ru</a>
+          <a class="page-footer__mail" href="mailto:example@mail.ru" title="Написать нам">example@mail.ru</a>
         </span>
       </div>
 
@@ -292,7 +296,7 @@
         </li>
       </ul>
 
-      <a class="page-footer__logo" href="index.html">
+      <a class="page-footer__logo" href="index.html" title="Открыть главную страницу">
         <img class="page-footer__logo-image" src="img/logo-desktop.svg" alt="Логотип сайта Art-one" width="79" height="68">
       </a>
 

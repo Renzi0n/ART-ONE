@@ -48,6 +48,7 @@
   flex-direction: column;
   box-shadow: $shadow-primary;
   width: 100vw;
+  position: relative;
 }
 
 .catalog__filters-title {
@@ -80,7 +81,7 @@
     transform: rotate(45deg);
     position: absolute;
     right: -30px;
-    bottom: 10px;
+    bottom: 13px;
     transition: $animation-primary;
   }
 
@@ -94,24 +95,30 @@
     transform: rotate(-45deg);
     position: absolute;
     right: -30px;
-    bottom: 2.5px;
+    bottom: 4px;
     transition: $animation-primary;
   }
 }
 
 .catalog__filters--active .catalog__filters-list {
   display: flex;
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
 .catalog__filters--active .catalog__filters-btn {
   &::before {
     right: -20px;
-    bottom: 7px;
+    bottom: 8px;
   }
 
   &::after {
     right: -28px;
-    bottom: 7px;
+    bottom: 8px;
   }
 }
 
