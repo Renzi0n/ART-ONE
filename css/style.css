@@ -683,7 +683,8 @@ img {
   border-radius: 16px;
   color: black;
   -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out; }
+  transition: all 0.2s ease-out;
+  cursor: pointer; }
   .button-primary:hover {
     color: #e34f0f;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -1308,3 +1309,93 @@ img {
 
 .pagination__item--inactive {
   pointer-events: none; }
+
+.offer {
+  padding: 50px 6% 30px; }
+
+.offer__title {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 auto 22px;
+  width: 220px;
+  text-align: center; }
+  @media (min-width: 1200px) {
+    .offer__title {
+      font-size: 36px;
+      line-height: 47px; } }
+
+.offer__description {
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #939393;
+  width: 230px;
+  margin: 0 auto 24px; }
+
+.offer__form {
+  margin-bottom: 70px; }
+
+.form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 30px; }
+
+.form__title {
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 41px; }
+
+.form__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.form__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 33px; }
+
+.form__input {
+  width: 170px;
+  font-size: 13.5px;
+  line-height: 17px;
+  color: #404040;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1.5px solid #dbdbdb;
+  border-radius: 15px;
+  padding: 5px 10px; }
+
+.form__input--photos {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  width: auto; }
+
+.form__input--info {
+  padding-top: 12px;
+  padding-bottom: 0; }
+
+.form__btn {
+  margin-left: auto;
+  margin-right: auto; }
