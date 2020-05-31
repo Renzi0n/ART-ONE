@@ -1338,17 +1338,27 @@ img {
 .offer__form {
   margin-bottom: 70px; }
 
+@media (min-width: 660px) {
+  .offer {
+    padding-left: 7%;
+    padding-right: 7%; } }
+
+@media (min-width: 900px) {
+  .offer {
+    padding-left: calc((100% - 780px) / 2);
+    padding-right: calc((100% - 780px ) / 2); } }
+
 .form__fieldset {
   border: none;
   padding: 0;
-  margin: 0 0 30px; }
+  margin: 0 0 20px; }
 
 .form__title {
   font-size: 18px;
   line-height: 23px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 41px; }
+  margin-bottom: 31px; }
 
 .form__list {
   display: -webkit-box;
@@ -1373,6 +1383,9 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 33px; }
 
 .form__input {
@@ -1386,12 +1399,6 @@ img {
   border-radius: 15px;
   padding: 5px 10px; }
 
-.form__input--photos {
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  width: auto; }
-
 .form__input--info {
   padding-top: 12px;
   padding-bottom: 0; }
@@ -1399,3 +1406,56 @@ img {
 .form__btn {
   margin-left: auto;
   margin-right: auto; }
+
+.form__file-input {
+  opacity: 0;
+  position: absolute;
+  left: -2000px; }
+
+.form__input-file {
+  color: #717171;
+  border: 1.5px solid #dbdbdb;
+  border-radius: 15px;
+  font-size: 9px;
+  line-height: 9px;
+  padding: 7px 6px;
+  margin-right: 10px;
+  cursor: pointer; }
+
+.form__file-count {
+  font-size: 11px;
+  line-height: 12px;
+  text-transform: uppercase; }
+
+@media (min-width: 660px) {
+  .form__title {
+    margin-bottom: 71px;
+    font-weight: 700;
+    text-align: left; }
+  .form__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .form__list--picture .form__list-item:last-of-type {
+    margin-left: auto; }
+  .form__list-item {
+    width: 50%; } }
+
+@media (min-width: 900px) {
+  .form__list--picture .form__list-item {
+    width: 33%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
+@media (min-width: 1200px) {
+  .form__title {
+    text-align: center;
+    margin-bottom: 81px; }
+  .form__fieldset {
+    margin-bottom: 60px; } }
