@@ -148,10 +148,8 @@ img {
   -webkit-transform: scale(0);
           transform: scale(0); }
 
-.page-header__icon-phone {
-  margin-right: 20px; }
-
-.page-header__icon-message {
+.page-header__icon {
+  margin-right: 20px;
   margin-left: 20px; }
 
 .page-header--open .page-header__menu {
@@ -219,7 +217,12 @@ img {
   .page-header__logo {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
-            order: 3; }
+            order: 3;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content; }
+  .page-header__logo:focus {
+    outline: 2.5px solid black; }
   .page-header__logo-mobile {
     display: none; }
   .page-header__logo-desktop {
@@ -260,6 +263,18 @@ img {
     position: absolute;
     bottom: 40px;
     right: 30px; } }
+
+.product-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .product-card--slider {
   margin: 32px 0; }
@@ -463,6 +478,11 @@ img {
 .control__radio + label:hover::before {
   width: 16px;
   height: 16px; }
+
+.control__radio:focus + label::before {
+  border: 1px solid black;
+  -webkit-transition: none;
+  transition: none; }
 
 .control__radio:checked + label::before {
   width: 16px;
@@ -668,10 +688,7 @@ img {
     line-height: 16px; } }
 
 .button-primary {
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  display: inline-block;
   min-height: 13px;
   background-color: transparent;
   font-size: 10px;
@@ -685,10 +702,17 @@ img {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   cursor: pointer; }
-  .button-primary:hover {
+  .button-primary:hover, .button-primary:focus {
     color: #e34f0f;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); }
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    border: 0.8px solid #e34f0f; }
+  .button-primary:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: none;
+    transition: none; }
   .button-primary:active {
     opacity: 0.5;
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -890,7 +914,7 @@ img {
   opacity: 1; }
 
 .catalog__filters-input:focus + .catalog__filters-label {
-  outline: 1px auto #3b99fc; }
+  outline: 1px auto black; }
 
 .catalog__filters-input + .catalog__filters-label:active {
   outline: none; }
@@ -1175,7 +1199,8 @@ img {
             transform: scale(1); }
 
 .painters__filter-item--active .painters__filter-btn {
-  pointer-events: none; }
+  pointer-events: none;
+  outline: none; }
 
 .painters__item img {
   width: 186px;
@@ -1305,6 +1330,9 @@ img {
 .pagination__item--inactive {
   pointer-events: none; }
 
+.pagination__item--inactive:focus {
+  outline: none; }
+
 .offer {
   padding: 50px 6% 30px; }
 
@@ -1402,6 +1430,11 @@ img {
   border: 1.5px solid #dbdbdb;
   border-radius: 15px;
   padding: 5px 10px; }
+  .form__input:hover {
+    border: 1.5px solid #e34f0f; }
+  .form__input:active, .form__input:focus {
+    border: 1.5px solid black;
+    outline: none; }
 
 .form__input--info {
   padding-top: 12px;
@@ -1412,6 +1445,13 @@ img {
 .form__btn {
   margin-left: auto;
   margin-right: auto; }
+
+.form__list-item--file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .form__file-input {
   opacity: 0;
@@ -1426,7 +1466,21 @@ img {
   line-height: 9px;
   padding: 7px 6px;
   margin-right: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+.form__file-input:hover + .form__input-file,
+.form__file-input:focus + .form__input-file {
+  color: white;
+  background-color: black;
+  border: 1.5px solid black; }
+
+.form__file-input:active + .form__input-file {
+  color: white;
+  background-color: black;
+  border: 1.5px solid black;
+  opacity: 0.5; }
 
 .form__file-count {
   font-size: 11px;
