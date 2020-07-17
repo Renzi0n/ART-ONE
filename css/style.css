@@ -417,7 +417,8 @@ img {
 
 @media (min-width: 660px) {
   .sale-slider {
-    width: 48.2%; } }
+    width: 48.2%;
+    height: 100%; } }
 
 @media (min-width: 1200px) {
   .sale-slider {
